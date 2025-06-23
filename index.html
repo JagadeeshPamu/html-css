@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cal{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .calculation{
+        display: flex;
+        justify-content: space-around;
+    }
+    .Addition{
+        padding: 15px;
+        background-color: burlywood;
+        border: 0 0 3px solid black;
+        text-align: right;
+   }
+   .cal,h3{
+    text-align: center;
+    margin-bottom: 40px;
+   }
+   .calculation{
+    text-align: center;
+    margin-bottom: 40px;
+   }
+   .subtraction{
+        padding: 15px;
+        background-color: aquamarine;
+        border: 0 0 3px solid black;
+        text-align: right;
+   }
+  .multiplication{
+    padding: 15px;
+        background-color: burlywood;
+        border: 0 0 3px solid black;
+        text-align: right;
+   }
+   .division{
+     padding: 15px;
+        background-color: aquamarine;
+        border: 0 0 3px solid black;
+        text-align: right;
+   }
+</style>
+<body>
+    <div class="cal">
+        <div class="Addition">
+        <h3>Addition</h3>
+        <label for="Addition">Sol:</label>
+        <input type="text" id="result" placeholder="Solution Here"><br> <br>
+        <label for="firstnumber">First Number:</label>
+        <input type="text" id="num1"><br> <br>
+        <label for="secondnumber">Second Number:</label>
+        <input type="text" id="num2"><br> <br>
+        <button type="button" onclick="addNumbers()">Submit</button>
+        </div>
+        <div class="subtraction">
+        <h3>Subtraction</h3>
+        <label for="subtraction">Sol:</label>
+        <input type="text" id="result2" placeholder="Solution Here"><br> <br>
+        <label for="firstnumber">First Number:</label>
+        <input type="text" id="num3"><br> <br>
+        <label for="secondnumber">Second Number:</label>
+        <input type="text" id="num4"><br> <br>
+        <button type="button" onclick="subtractNumbers()">Submit</button></div>
+        </div>
+        <div class="calculation">
+        <div class="multiplication">
+        <h3>Multiplication</h3>
+        <label for="multiplication">Sol:</label>
+        <input type="text" id="result3" placeholder="Solution Here"><br> <br>
+        <label for="firstnumber">First Number:</label>
+        <input type="text" id="num5" ><br> <br>
+        <label for="secondnumber">Second Number:</label>
+        <input type="text" id="num6"><br> <br>
+        <button type="button" onclick="mul()">Submit</button></div>
+        <div class="division">
+        <h3>Division</h3>
+        <label for="division">Sol:</label>
+        <input type="text" id="result4" placeholder="Solution Here"><br> <br>
+        <label for="firstnumber">First Number:</label>
+        <input type="text" id="num7"><br> <br>
+        <label for="secondnumber">Second Number:</label>
+        <input type="text" id="num8"><br> <br>
+        <button type="button" onclick="div()">Submit</button></div>
+    </div>
+    <script>
+      function addNumbers() {
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;
+
+        var result = Number(a) + Number(b);
+
+        document.getElementById("result").value = result;
+      }
+     function subtractNumbers() {
+         var a = document.getElementById("num3").value;
+        var b = document.getElementById("num4").value;
+
+        var result = Number(a) - Number(b);
+
+        document.getElementById("result2").value = result;
+    }
+     function mul() {
+         var a = document.getElementById("num5").value;
+        var b = document.getElementById("num6").value;
+
+        var result = Number(a) * Number(b);
+
+        document.getElementById("result3").value = result;
+    }
+    function div(){
+         var a = document.getElementById("num7").value;
+        var b = document.getElementById("num8").value;
+
+        var result = Number(a) / Number(b);
+
+        document.getElementById("result4").value = result;
+    }
+    </script>
+</body>
+</html>
